@@ -23,7 +23,9 @@ Code splitting:
 	syntax:
 	
 		without code-split:
+			````
 			import CompA from './CompA';
+			```
 		
 		with code-split:
 			import('filePath').then(promise => {
