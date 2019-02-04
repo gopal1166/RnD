@@ -1,31 +1,30 @@
-Code splitting:
+Code splitting:  
 
-	bundling: 
-		The process of importing files and merging them into a single file
-	bundle:
-		This bundle can then be included on a webpage to load an entire app at once.
+bundling:
+
+	The process of importing files and merging them into a single file
+bundle:  
+	
+	This bundle can then be included on a webpage to load an entire app at once.\
 		
-	but as app grows bundle also grows, 
-	incase of importing third party libraries the app takes time to load
+but as app grows bundle also grows, 
+incase of importing third party libraries the app takes time to load  
+So instead of one large bundle, we split the bundle to chunks  
+with this code splitting we can 'lazy-load' the components required by the user not the entire app  
+we're not reduce the code. but we avoided code that may not be needed by the user  
+so reduced the amount of code needed during initial load  
+So dynamically improves performance
 	
-	So instead of one large bundle, we split the bundle to chunks
-	
-	with this code splitting we can 'lazy-load' the components required by the user not the entire app
-	
-	we're not reduce the code. but we avoided code that may not be needed by the user
-	
-	so reduced the amount of code needed during initial load
-	So dynamically improves performance
-	
-	import():
-		Best way to code split
+import():
+
+	Best way to code split
 		
-	syntax:
+syntax:
 	
-		without code-split:
-			````
-			import CompA from './CompA';
-			```
+	without code-split:
+		```
+		import CompA from './CompA';
+		```
 		
 		with code-split:
 			import('filePath').then(promise => {
@@ -38,10 +37,12 @@ Code splitting:
 		
 		import React, { lazy, } 
 		syntax:
-			const CompA = lazy(() => import('filePath')) 
+			const CompA = lazy(() => import('filePath'))  
+Suspense:
 		
-	Suspense:
-		If the module containing the OtherComponent is not yet loaded by the time MyComponent renders, we must show some fallback content while we’re waiting for it to load - such as a loading indicator. This is done using the Suspense component.
+		If the module containing the OtherComponent is not yet loaded by the time MyComponent renders, 
+		we must show some fallback content while we’re waiting for it to load - such as a loading indicator.
+		This is done using the Suspense component.
 		
 	syntax:
 		<div>
@@ -51,8 +52,9 @@ Code splitting:
 		</div>
 		
 		
-	Error boundary:
-		in case of poor network if the modules failed to load by the time parent module is rendered then we can show error message
+Error boundary:
+
+	in case of poor network if the modules failed to load by the time parent module is rendered then we can show error message
 		
 		import MyErrorBoundary from './MyErrorBoundary';
 		const OtherComponent = React.lazy(() => import('./OtherComponent'));
@@ -72,8 +74,8 @@ Code splitting:
 		);
 		
 		
-Route based code splitting:
-	A good place to start is with routes.
+Route based code splitting:  
+A good place to start is with routes.
 	
 	import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 	import React, { Suspense, lazy } from 'react';
