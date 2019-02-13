@@ -71,3 +71,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
 import signals
 ```
+#### Then in settins.py file configure AUTH_USER_MODEL
+```
+AUTH_USER_MODEL = 'accounts.UserProfile'
+```
