@@ -1,4 +1,5 @@
-#### To crud on custom user profile we follow
+#### To crud on custom user profile in admin we follow
+#### admin.py
 ```
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
