@@ -20,3 +20,17 @@ We'll face this error in the below case:
       
 We should migrate to db either of these tables
 ```
+
+#### Connection Refuser after testing registration api of django-rest-auth
+```
+solved by placing EMAIL_BACKEND setting
+
+EMAIL_USE_TLS = True
+# SERVER_EMAIL = 'pgopal1166@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'vgopal1166@gmail.com'
+EMAIL_HOST_PASSWORD = 'Vgopal@1166'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+```
