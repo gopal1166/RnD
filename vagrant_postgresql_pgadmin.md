@@ -161,10 +161,11 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       
 To use pgAdmin 4 to inspect database on a Vagrant vm:
 
-       [Vagrant, PostgreSQL, pgAdmin 4](https://snakeycode.wordpress.com/2015/01/02/vagrant-postgresql-and-pgadmin/)
-       
-       [alternative](https://gielberkers.com/how-to-connect-to-mysql-in-vagrant-from-your-host-machine/)
 
+   [Vagrant, PostgreSQL, pgAdmin 4](https://snakeycode.wordpress.com/2015/01/02/vagrant-postgresql-and-pgadmin/)
+       
+   [alternative](https://gielberkers.com/how-to-connect-to-mysql-in-vagrant-from-your-host-machine/)
+    
        Vagrant already has SSH setup 
        so we can connect to the database is using pgAdmin's SSH tunneling feature(secured)
        
