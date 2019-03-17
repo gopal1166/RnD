@@ -89,7 +89,6 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
 2. postgresql db server setup, db user, db_name, db_password setup
 
       [PostgreSQL with Django app](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04)
-      [Alternative](https://gielberkers.com/how-to-connect-to-mysql-in-vagrant-from-your-host-machine/)
       
       $ sudo apt-get update
       $ ssudo apt-get install postgresql postgresql-contrib
@@ -161,6 +160,10 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       ```
       
 To use pgAdmin 4 to inspect database on a Vagrant vm:
+
+       [Vagrant, PostgreSQL, pgAdmin 4](https://snakeycode.wordpress.com/2015/01/02/vagrant-postgresql-and-pgadmin/)
+       
+       [alternative](https://gielberkers.com/how-to-connect-to-mysql-in-vagrant-from-your-host-machine/)
 
        Vagrant already has SSH setup 
        so we can connect to the database is using pgAdmin's SSH tunneling feature(secured)
