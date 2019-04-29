@@ -1,3 +1,4 @@
+```
 let now =new Date();
 const recurr_type = "PID";
 
@@ -25,3 +26,4 @@ var dates = getDates(now, after2Months);
 dates.forEach(function(date) {
   console.log(date);
 });
+```
