@@ -1,3 +1,11 @@
+### Adding background color to entire react app: 13-07-2020:
+
+in public/index.html:
+```
+<body style="background-color: red">
+```
+
+
 ### Modify antd default theme (primary color) : 11-07-2020
 
 [link](https://medium.com/@okoriechinedusunday/a-baby-guide-to-overriding-antdesign-theme-and-color-aa6df1f85e0)
