@@ -26,3 +26,9 @@ update-alternatives: using /usr/bin/python3.4 to provide /usr/bin/python (python
 ```
 
 @ highest number will be default version i.e 2
+
+Now check again
+```
+$ python --version
+Python 3.4.2
+```
