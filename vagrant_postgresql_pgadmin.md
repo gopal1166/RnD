@@ -242,6 +242,10 @@ To use pgAdmin 4 to inspect database on a Vagrant vm:
 }
 ```
 
+ex:
+[![postgres-db-creds.png](https://i.postimg.cc/k4bmyNKp/postgres-db-creds.png)](https://postimg.cc/1ns2mqWG)
+
+
 Start the dev server in vagrant:
 ```
 python manage.py runserver 0.0.0.0:8080   (port forwording from vagrant server)
