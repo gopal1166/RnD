@@ -250,6 +250,10 @@ python manage.py runserver 0.0.0.0:8080   (port forwording from vagrant server)
 To access the app:
 `127.0.0.0:8080` in the browser
 
+[![pg-Admin4-vagrant-postgres.png](https://i.postimg.cc/Njc52Fqt/pg-Admin4-vagrant-postgres.png)](https://postimg.cc/F7T929HC)
+
+
+
 
 Forgot sudo password:
 
