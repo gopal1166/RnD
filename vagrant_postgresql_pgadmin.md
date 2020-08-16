@@ -214,7 +214,9 @@ To use pgAdmin 4 to inspect database on a Vagrant vm:
       
       Install psycopg2: To allow to use the database configured
       ```
-      pip install django psycopg2
+      $ sudo apt-get install libpq-dev python-dev
+      $ pip install psycopg2
+      $ pip install django 
       ```
       
  To list all virtualenvs: `lsvirtualenv -b`
