@@ -134,66 +134,6 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
  Now we've the new database with db_user_name and db_user_password credentials
  So we can view and manage this data base using pgAdmin4 GUI tool from local windows host.
  
- To connect to vagrant's postgres and manage databases from local machine:
- 
- 1.vagrant configurations:
- 
-      first connect to vagrant server
-      ```
-      $ vagrant up
-      $ vagrant ssh
-      ```
-      
-      edit the file `/etc/postgresql/9.4/main/pg_hba.conf` and add the below line
-      ```
-      host all all 0.0.0.0/0 md5
-      ```
-          
-      edit the file `postgresql.conf`
-      ```
-      listen_addresses = '*'            #uncomment this
-      ```
-      
-      Restrart the postgresql server to reflect the modification in config files
-      ```
-      $ sudo service postgresql restart
-      ```
-      
-To use pgAdmin 4 to inspect database on a Vagrant vm:
-
-
-   [Vagrant, PostgreSQL, pgAdmin 4](https://snakeycode.wordpress.com/2015/01/02/vagrant-postgresql-and-pgadmin/)
-       
-   [alternative](https://gielberkers.com/how-to-connect-to-mysql-in-vagrant-from-your-host-machine/)
-    
-       Vagrant already has SSH setup 
-       so we can connect to the database is using pgAdmin's SSH tunneling feature(secured)
-       
-       To do:
-       `click create new server` and fill these
-       
-       Name: 'any name of your choice(eg: Vagrant)
-       Host: 'localhost'      #not the vagrant ip address
-       Username: 'database_username`
-       Password: 'database_password/db_user_password'
-       
-       DO NOT CLICK OK & TRY TO CONNECT. THIS IS NOT OVER YET.
-       
-       Click the SSH Tunnel tab:
-       
-       Tunnel host: 'ip address of the Vagrant VM'
-       Username: 'Linux username when we used when you use SSH to the vm'     # generally vagrant user
-       Identify file: 'SSH private key for this virtual machine`
-       
-       when you run `vagrant up` it creates a .vagrant folder.
-       The private key file path:
-       ```~/my_project/.vagrant/machines/default/virtualbox/private_key```
-       
-       Then click ok. we're done
-       
-       Now we can see the database of Vagrant vm in our local windows machine's pgAdmin 4.
-       
-
 
   To create virtualenv and activate:
   
@@ -253,6 +193,28 @@ python manage.py runserver 0.0.0.0:8080   (port forwording from vagrant server)
 
 To access the app:
 `127.0.0.0:8080` in the browser
+
+Create an app and register with settings:
+```
+python mange.py startapp 'app_name'
+```
+
+Register with settings:
+
+Create a model and migate to db:
+[link](https://www.digitalocean.com/community/tutorials/how-to-create-django-models)
+
+
+Go to shell and check whether able to access the table:
+```
+python manage.py shell
+```
+
+import table from app.models and verify:
+
+After confirm:
+
+Now use GUI (pgAdmin):
 
 [![pg-Admin4-vagrant-postgres.png](https://i.postimg.cc/Njc52Fqt/pg-Admin4-vagrant-postgres.png)](https://postimg.cc/F7T929HC)
 
