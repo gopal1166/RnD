@@ -242,6 +242,14 @@ To use pgAdmin 4 to inspect database on a Vagrant vm:
 }
 ```
 
+Start the dev server in vagrant:
+```
+python manage.py runserver 0.0.0.0:8080   (port forwording from vagrant server)
+```
+
+To access the app:
+`127.0.0.0:8080` in the browser
+
 
 Forgot sudo password:
 
