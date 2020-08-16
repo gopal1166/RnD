@@ -216,6 +216,8 @@ After confirm:
 
 Now use GUI (pgAdmin):
 
+Click New Server and give connection details. That's it.
+
 [![pg-Admin4-vagrant-postgres.png](https://i.postimg.cc/Njc52Fqt/pg-Admin4-vagrant-postgres.png)](https://postimg.cc/F7T929HC)
 
 
