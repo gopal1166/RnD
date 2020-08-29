@@ -88,7 +88,7 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
     
 2. postgresql db server setup, db user, db_name, db_password setup
 
-      [PostgreSQL with Django app](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04)
+      [PostgreSQL with Django app](https://postimg.cc/zbdnfDsp)
       
       $ sudo apt-get update
       $ ssudo apt-get install postgresql postgresql-contrib
