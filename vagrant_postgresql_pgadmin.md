@@ -108,7 +108,8 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       
       create a database managed by that user:
       
-      [Database creation in postgres with new user](https://ibb.co/h1HVvcS)
+      [Database creation in postgres with new user](![spsa_db_creation](https://user-images.githubusercontent.com/29883334/91632215-04845300-e9fd-11ea-81b6-15481747ca25.PNG)
+)
      
      
      
