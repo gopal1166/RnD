@@ -97,25 +97,21 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       $ sudo adduser postgres_user
       
       Log into the default PostgreSQL user (called "postgres") to create a database and assign it to the new user:
-      $ sudo su - postgres
+      $ sudo -su postgres
       $ psql
       
       Now you are in PostgreSQL command prompt
       
+      ## Database creation with new user
+      
       Create a new user that matches the system user you created.
-      Then create a database managed by that user:
-      $ CREATE USER postgres_user WITH PASSWORD 'password';
-      $ CREATE DATABASE my_postgres_db OWNER postgres_user;
       
-      ```
-      ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
-      ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
-      ALTER ROLE myprojectuser SET timezone TO 'UTC';
-      ```
+      create a database managed by that user:
       
-      ```
-      GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
-      ```
+      [Database creation in postgres with new user]([![spsa-db-creation.png](https://i.postimg.cc/Hnm3BVBG/spsa-db-creation.png)](https://postimg.cc/zbdnfDsp))
+     
+     
+     
       
       To exit out of interface
       $ \q
