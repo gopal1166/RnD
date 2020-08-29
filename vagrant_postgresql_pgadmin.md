@@ -182,6 +182,8 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
 ex:
 [![postgres-db-creds.png](https://i.postimg.cc/k4bmyNKp/postgres-db-creds.png)](https://postimg.cc/1ns2mqWG)
 
+![spsa_db_creation](https://user-images.githubusercontent.com/29883334/91632277-7066bb80-e9fd-11ea-920d-abb496dddd85.PNG)
+
 [![postgres-db-creds.png](https://i.postimg.cc/k4bmyNKp/postgres-db-creds.png)](https://postimg.cc/1ns2mqWG)
 
 
