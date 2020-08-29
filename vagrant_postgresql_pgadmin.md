@@ -108,6 +108,17 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       
       create a database managed by that user:
       
+      ```
+      $ sudo -su postgres
+      $ psql
+      
+      $ CREATE DATABASE db_name;
+      $ CREATE USER db_user WITH ENCRYPTED PASSWORD 'db_user_pass';
+      $ GRANT ALL PRIVILEGES ON DATABASE db_name TO db_user;
+      
+      $ \l
+      ```
+      
  ![spsa_db_creation](https://user-images.githubusercontent.com/29883334/91632277-7066bb80-e9fd-11ea-920d-abb496dddd85.PNG)
      
     
