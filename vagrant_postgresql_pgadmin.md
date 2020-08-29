@@ -182,6 +182,8 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
 ex:
 [![postgres-db-creds.png](https://i.postimg.cc/k4bmyNKp/postgres-db-creds.png)](https://postimg.cc/1ns2mqWG)
 
+[![postgres-db-creds.png](https://i.postimg.cc/k4bmyNKp/postgres-db-creds.png)](https://postimg.cc/1ns2mqWG)
+
 
 Start the dev server in vagrant:
 ```
