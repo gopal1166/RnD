@@ -17,8 +17,8 @@ steps:
 
     google for [vagrant boxes](https://app.vagrantup.com/boxes/search) and select one
     
-    To install ubuntu 16 (xenial) 
-    $ vagrant init ubuntu/xenial64
+    To install ubuntu 118 (bionic) 
+    $ vagrant init ubuntu/bionic64
     $ vagrant up
     
     To connect to vagrant server:
@@ -53,7 +53,7 @@ Vagrant file configurations steps:
             # Set Ubuntu Language
             sudo locale-gen en_GB.UTF-8
             # Install Python, SQLite and pip
-            sudo apt-get install -y python3-dev sqlite python-pip
+            sudo apt-get install -y python3-dev sqlite python3-pip
             # Upgrade pip to the latest version.
             sudo pip install --upgrade pip
             # Install and configure python virtualenvwrapper.
@@ -90,15 +90,17 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
 
       [PostgreSQL with Django app](https://postimg.cc/zbdnfDsp)
       
-      $ sudo apt-get update
-      $ ssudo apt-get install postgresql postgresql-contrib
+          $ sudo apt-get update
+          $ sudo apt-get install postgresql postgresql-contrib
       
       To create a new database and database user to manage the database:
-      $ sudo adduser postgres_user
+      
+          $ sudo adduser postgres_user
       
       Log into the default PostgreSQL user (called "postgres") to create a database and assign it to the new user:
-      $ sudo -su postgres
-      $ psql
+      
+          $ sudo -su postgres
+          $ psql
       
       Now you are in PostgreSQL command prompt
       
@@ -127,7 +129,7 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       
       Exit out of the default "postgres" user account and log into the user you created with the following 
       $ exit
-      $ sudo su - postgres_user
+      $ sudo su - postgres_user | sudo su postgres_user
       
       Sign into the database you created 
       $ psql my_postgres_db
@@ -139,29 +141,44 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
  Now we've the new database with db_user_name and db_user_password credentials
  So we can view and manage this data base using pgAdmin4 GUI tool from local windows host.
  
+### Python version: 3.9 @Date: 20/10/2020
+
+    ```
+    $ sudo add-apt-repository ppa:deadsnakes/ppa
+    $ sudo apt update
+    $ sudo apt install python3.9
+    
+    $ python --version
+    
+    Note: To make 3.9 as default
+     $ which python
+     $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+     $ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
+    ```
 
   To create virtualenv and activate:
   
-      To install virtualenv
-      ```
-      $ sudo pip install virtualenv
-      ```
-      
       To create virtualenv
       ```
-      virtualenv venv_name
-      ```
-      
-      To activate:
-      ```
-      source venv_name/bin/activate
+      $ sudo apt install python3-pip
+      $ sudo apt install virtualenv | sudo pip install virtualenv
+      $ virtualenv --python=/usr/bin/python3.9 venv_name --always-copy
       ```
       
       Install psycopg2: To allow to use the database configured
       ```
-      $ sudo apt-get install libpq-dev python-dev
-      $ pip install psycopg2
-      $ pip install django 
+      $ sudo apt-get install python3-psycopg2
+      ```
+      
+      To activate:
+      ```
+      $ source venv_name/bin/activate
+      ```
+      
+      install django3:
+      ```
+      $ pip install Django==3.1.2
+      $ pip freeze > requirements.txt
       ```
       
  To list all virtualenvs: `lsvirtualenv -b`
