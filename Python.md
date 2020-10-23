@@ -1,8 +1,10 @@
-To install Python new version:
+To install Python 3.9 new version:
 ```
-sudo add-apt-repository ppa:deadsnakes/ppa   
-sudo apt-get update   
-sudo apt install python3.7 
+$ sudo apt update 
+$ sudo apt install software-properties-common 
+$ sudo add-apt-repository ppa:deadsnakes/ppa   
+$ sudo apt-get update   
+$ sudo apt install python3.9 
 ```
 
 To switch python versions system wide:
