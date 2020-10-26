@@ -4,7 +4,7 @@ $ sudo apt update
 $ sudo apt install software-properties-common 
 $ sudo add-apt-repository ppa:deadsnakes/ppa   
 $ sudo apt-get update   
-$ sudo apt install python3.9 
+$ sudo apt install python3.9 python3.9-distutils
 ```
 
 2. swith to latest python3 installed
