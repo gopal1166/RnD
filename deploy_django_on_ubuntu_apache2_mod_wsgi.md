@@ -17,13 +17,20 @@ $ python --version
 Python 3.9
 ```
 
-3. install virtualenv, create one, activate
+3. install virtualenv, create one, activate, install django
 ```
 $ sudo apt install virtualenv
+$ which python
 $ virtualenv --python=/usr/bin/python3.9 venv_name --always-copy
 
 $ source venv_name/bin/activate
 $ python -v
 PYthon 3.9
+
+$  pip install Django==3.1.2
 ```
+
+
+
+
 
