@@ -17,17 +17,9 @@ $ python --version
 Python 3.9
 ```
 
-3. install virtualenv, create one, activate, install django
+3. install virtualenv
 ```
 $ sudo apt install virtualenv
-$ which python
-$ virtualenv --python=/usr/bin/python3.9 venv_name --always-copy
-
-$ source venv_name/bin/activate
-$ python -v
-PYthon 3.9
-
-$  pip install Django==3.1.2
 ```
 
 4. install apache2, mod_wsgi
@@ -51,4 +43,23 @@ $ cd /usr/lib/apache2/modules
 $ ldd mod_wsgi.so
 ```
 
+6. Create virtualenv and activate, install django latest version
+```
+$ which python
+$ cd /var/wwww
+$ virtualenv --python=/usr/bin/python3.9 wtf-venv --always-copy
 
+$ source wtf-venv/bin/activate
+$ python -v
+PYthon 3.9
+
+$ pip install Django==3.1.2
+```
+
+6. Create a demo django project in /var/www location, run using runserver
+```
+$ cd /var/www
+$ source wtf-venv/bin/activate
+$ django-admin startproject project
+
+```
