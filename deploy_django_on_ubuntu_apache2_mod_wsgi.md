@@ -102,3 +102,8 @@ $ ldd mod_wsgi.so
 
 </VirtualHost>
 ```
+
+Restart the apache2 service whenever made changes
+```
+systemctl restart apache2 | service apache2 restart
+```
