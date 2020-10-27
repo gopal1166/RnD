@@ -30,7 +30,25 @@ PYthon 3.9
 $  pip install Django==3.1.2
 ```
 
+4. install apache2, mod_wsgi
+```
+$ sudo apt install apache2
+$ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/4.7.1.tar.gz
+$ tar xvfz 4.7.1.tar.gz
 
+$ which python
+$ ./configure --with-python=/usr/bin/python3.9
+$ make
+$ make install
 
+[download file here](https://github.com/GrahamDumpleton/mod_wsgi/releases)
+[mod_wsgi docs](https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html)
+```
+
+5. verify the python version (in second line) used by mod_wsgi.so
+```
+$ cd /usr/lib/apache2/modules
+$ ldd mod_wsgi.so
+```
 
 
