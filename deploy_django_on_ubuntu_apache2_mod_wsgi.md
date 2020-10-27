@@ -66,7 +66,7 @@ $ cd /usr/lib/apache2/modules
 $ ldd mod_wsgi.so
 ```
 
-. configure django app with apache web server in /etc/apache2/apache2.conf  or /etc/apache2/sites-available/000-default.conf
+. configure django app with apache web server in **/etc/apache2/apache2.conf**  or **/etc/apache2/sites-available/000-default.conf**
 ```
 <VirtualHost *:80>
 
