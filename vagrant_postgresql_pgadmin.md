@@ -91,7 +91,7 @@ Now Vagrant server will be booted up with the modifications in Vagrantfile
       [PostgreSQL with Django app](https://postimg.cc/zbdnfDsp)
       
           $ sudo apt-get update
-          $ sudo apt-get install postgresql postgresql-contrib
+          $ sudo apt-get install postgresql postgresql-contrib python3-psycopg2
       
       To create a new database and database user to manage the database:
       
